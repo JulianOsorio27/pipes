@@ -1,0 +1,74 @@
+<div class="text-layout">
+    <h1>Pipes Básicos</h1>
+    <p> Pipes incluídos en Angular - Usualmente en el Common Module. </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-4">
+        <p-card header="uppercase" subheader="Pipe que transforma minusculas en mayusculas. Ej: {{nombreMinuscula}} ">
+            Resultado del pipe: {{nombreMinuscula | uppercase }}
+        </p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header="lowercase" subheader="Pipe que transforma mayusculas en minusculas. Ej: {{nombreMayuscula}} ">
+            Resultado del pipe: {{nombreMayuscula | lowercase }}
+        </p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header="titlecase" subheader="Pipe que capitaliza las letras iniciales. Ej: {{nombreTitleCase}} ">
+            Resultado del pipe: {{nombreTitleCase | titlecase }}
+        </p-card>
+    </div>
+
+</div>
+
+<!-- div fecha -->
+<div class="text-layout">
+    <h1>Pipe para fecha </h1>
+    <p> Transforma visualmente las fechas por defecto. </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-6">
+        <p-card>
+            <ul>
+                <li> fecha </li>
+                <li> fecha | date </li>
+                <li> fecha | date:'short' </li>
+                <li> fecha | date:'long' </li>
+                <li> fecha | date:'MMMM'</li>
+                <li> fecha | date:'MMMM dd, yyyy' </li>
+            </ul>
+
+            <hr>
+            <ul>
+                <li>fecha | date:'long':'GMT-7' </li>
+                <li>fecha | date:'long':'GMT-9':'en' </li>
+                <li>fecha | date:'long':'':'fr' </li>
+            </ul>
+
+        </p-card>
+    </div>
+    <div class="p-col-6">
+        <p-card>
+            <ul>
+                <li> {{fecha}} </li>
+                <li> {{fecha | date}} </li>
+                <li> {{fecha | date:'short'}} </li>
+                <li> {{fecha | date:'long'}} </li>
+                <li> {{fecha | date:'MMMM'}} </li>
+                <li> {{fecha | date:'MMMM dd, yyyy'}} </li>
+            </ul>
+
+            <hr>
+            <ul>
+                <li> {{fecha | date:'long':'GMT-7'}} </li>
+                <li> {{fecha | date:'long':'GMT-9':'en'}} </li>
+                <li> {{fecha | date:'long':'':'fr'}} </li>
+            </ul>
+
+        </p-card>
+    </div>
+</div>
